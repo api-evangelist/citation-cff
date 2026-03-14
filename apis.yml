@@ -1,0 +1,14 @@
+name: CITATION.cff
+description: Citation File Format providing machine-readable citation metadata for
+  software projects, enabling proper academic attribution and referencing.
+url: ''
+tags:
+- Citation
+- Research
+- Metadata
+- Academic
+- Repository
+created: '2025'
+modified: '2025'
+apis: []
+common: []
