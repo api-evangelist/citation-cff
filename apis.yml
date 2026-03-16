@@ -1,14 +1,30 @@
+aid: citation-cff
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/citation-cff/refs/heads/main/apis.yml
 name: CITATION.cff
-description: Citation File Format providing machine-readable citation metadata for
-  software projects, enabling proper academic attribution and referencing.
-url: ''
 tags:
-- Citation
-- Research
-- Metadata
-- Academic
-- Repository
-created: '2025'
-modified: '2025'
+  - Citation
+  - Research
+  - Metadata
+  - Academic
+  - Repository
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2025-01-01'
+modified: '2026-03-16'
+position: Consumer
+description: >-
+  CITATION.cff is the Citation File Format providing machine-readable citation
+  metadata for software projects, enabling proper academic attribution and
+  referencing.
 apis: []
-common: []
+common:
+  - type: Website
+    url: https://citation-file-format.github.io/
+  - type: Documentation
+    url: https://github.com/citation-file-format/citation-file-format
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+specificationVersion: '0.19'
