@@ -3,11 +3,11 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/citation-cff/refs/heads/main/apis.yml
 name: CITATION.cff
 tags:
-  - Citation
-  - Research
-  - Metadata
   - Academic
+  - Citation
+  - Metadata
   - Repository
+  - Research
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
