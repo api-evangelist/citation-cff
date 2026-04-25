@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/citation-cff/main/json-schema/citation-cff-schema.json",
+  "title": "Citation File Format (CFF) - Subset Profile",
+  "description": "A pragmatic JSON Schema profile of the Citation File Format 1.2.0 capturing the most commonly used fields. The authoritative schema is published at https://github.com/citation-file-format/citation-file-format.",
+  "type": "object",
+  "required": ["cff-version", "message", "authors", "title"],
+  "properties": {
+    "cff-version": {
+      "type": "string",
+      "pattern": "^1\\.[0-9]+\\.[0-9]+$",
+      "description": "The version of the CFF schema this file complies with."
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable message instructing how to cite the software."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The name of the software or dataset being cited."
+    },
+    "version": {
+      "type": "string",
+      "description": "The released version being cited."
+    },
+    "doi": {
+      "type": "string",
+      "pattern": "^10\\.[0-9]{4,}/.+",
+      "description": "DOI of the software or dataset."
+    },
+    "date-released": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 date the version was released."
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier."
+    },
+    "repository-code": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the source code repository."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the software project."
+    },
+    "abstract": {
+      "type": "string",
+      "description": "Short description of the software."
+    },
+    "keywords": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Keywords describing the software."
+    },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/Author"}
+    },
+    "preferred-citation": {"$ref": "#/$defs/Reference"},
+    "references": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/Reference"}
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/Identifier"}
+    },
+    "type": {
+      "type": "string",
+      "enum": ["software", "dataset"]
+    }
+  },
+  "$defs": {
+    "Author": {
+      "type": "object",
+      "oneOf": [
+        {"required": ["family-names"]},
+        {"required": ["name"]}
+      ],
+      "properties": {
+        "family-names": {"type": "string"},
+        "given-names": {"type": "string"},
+        "name": {"type": "string"},
+        "name-particle": {"type": "string"},
+        "name-suffix": {"type": "string"},
+        "alias": {"type": "string"},
+        "affiliation": {"type": "string"},
+        "email": {"type": "string", "format": "email"},
+        "orcid": {"type": "string", "pattern": "^https://orcid\\.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9X]{4}$"}
+      }
+    },
+    "Reference": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {"type": "string"},
+        "title": {"type": "string"},
+        "authors": {"type": "array", "items": {"$ref": "#/$defs/Author"}},
+        "year": {"type": "integer"},
+        "month": {"type": "integer"},
+        "publisher": {"type": "object"},
+        "doi": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "journal": {"type": "string"},
+        "volume": {"type": "integer"},
+        "issue": {"type": "string"},
+        "start": {"type": "integer"},
+        "end": {"type": "integer"}
+      }
+    },
+    "Identifier": {
+      "type": "object",
+      "required": ["type", "value"],
+      "properties": {
+        "type": {"type": "string", "enum": ["doi", "url", "swh", "other"]},
+        "value": {"type": "string"},
+        "description": {"type": "string"}
+      }
+    }
+  }
+}

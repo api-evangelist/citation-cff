@@ -1,0 +1,75 @@
+aliases:
+  CitationCff:
+    - "$"
+rules:
+  cff-version-required:
+    description: A CITATION.cff file MUST declare a cff-version field.
+    severity: error
+    given: "#CitationCff"
+    then:
+      field: cff-version
+      function: truthy
+  cff-version-current:
+    description: cff-version SHOULD be 1.2.0 to use the current schema.
+    severity: warn
+    given: "#CitationCff.cff-version"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^1\\.2\\.0$"
+  cff-message-required:
+    description: A CITATION.cff file MUST contain a message field.
+    severity: error
+    given: "#CitationCff"
+    then:
+      field: message
+      function: truthy
+  cff-title-required:
+    description: A CITATION.cff file MUST contain a title field.
+    severity: error
+    given: "#CitationCff"
+    then:
+      field: title
+      function: truthy
+  cff-authors-required:
+    description: A CITATION.cff file MUST contain at least one author.
+    severity: error
+    given: "#CitationCff"
+    then:
+      field: authors
+      function: truthy
+  cff-doi-recommended:
+    description: A CITATION.cff file SHOULD declare a DOI for citable releases.
+    severity: warn
+    given: "#CitationCff"
+    then:
+      field: doi
+      function: truthy
+  cff-version-recommended:
+    description: A CITATION.cff file SHOULD declare a software version.
+    severity: warn
+    given: "#CitationCff"
+    then:
+      field: version
+      function: truthy
+  cff-date-released-recommended:
+    description: A CITATION.cff file SHOULD declare a date-released.
+    severity: warn
+    given: "#CitationCff"
+    then:
+      field: date-released
+      function: truthy
+  cff-license-recommended:
+    description: A CITATION.cff file SHOULD declare an SPDX license identifier.
+    severity: warn
+    given: "#CitationCff"
+    then:
+      field: license
+      function: truthy
+  cff-repository-recommended:
+    description: A CITATION.cff file SHOULD declare a repository-code URL.
+    severity: warn
+    given: "#CitationCff"
+    then:
+      field: repository-code
+      function: truthy

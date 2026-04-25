@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "@vocab": "https://citation-file-format.github.io/vocab/",
+    "schema": "https://schema.org/",
+    "cff": "https://citation-file-format.github.io/vocab/",
+    "Software": "schema:SoftwareSourceCode",
+    "Dataset": "schema:Dataset",
+    "Author": "schema:Person",
+    "Organization": "schema:Organization",
+    "Reference": "schema:CreativeWork",
+    "Identifier": "schema:PropertyValue",
+    "License": "schema:license",
+    "cffVersion": "cff:cff-version",
+    "title": "schema:name",
+    "version": "schema:softwareVersion",
+    "doi": "cff:doi",
+    "abstract": "schema:description",
+    "authors": "schema:author",
+    "preferredCitation": "cff:preferred-citation",
+    "references": "cff:references",
+    "repositoryCode": "schema:codeRepository",
+    "url": "schema:url",
+    "dateReleased": "schema:datePublished",
+    "keywords": "schema:keywords",
+    "message": "cff:message",
+    "type": "schema:additionalType",
+    "givenNames": "schema:givenName",
+    "familyNames": "schema:familyName",
+    "orcid": "cff:orcid",
+    "affiliation": "schema:affiliation",
+    "email": "schema:email"
+  }
+}
