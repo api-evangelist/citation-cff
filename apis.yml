@@ -173,7 +173,7 @@ common:
   - type: JSONSchema
     url: json-schema/citation-cff-schema.json
   - type: Spectral
-    url: spectral/citation-cff-spectral.yml
+    url: rules/citation-cff-rules.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

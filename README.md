@@ -67,7 +67,7 @@ A GitHub Action that runs schema validation on a repository's CITATION.cff durin
 - [License](https://github.com/citation-file-format/citation-file-format/blob/main/LICENSE)
 - [JSON-LD Context](json-ld/citation-cff-context.jsonld)
 - [JSON Schema](json-schema/citation-cff-schema.json)
-- [Spectral Ruleset](spectral/citation-cff-spectral.yml)
+- [Spectral Ruleset](rules/citation-cff-rules.yml)
 
 ## Maintainers
 
