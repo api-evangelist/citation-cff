@@ -3,11 +3,10 @@ name: Citation File Format
 url: https://raw.githubusercontent.com/api-evangelist/citation-cff/refs/heads/main/apis.yml
 created: '2025-01-01'
 modified: '2026-04-23'
-type: Standard
+kind: standard
 access: Open
 position: Standard
 specificationVersion: '0.19'
-x-type: standard
 tags:
   - Academic
   - Citation
@@ -168,7 +167,7 @@ common:
     url: https://github.com/citation-file-format/citation-file-format/blob/main/LICENSE
   - type: Citation
     url: https://github.com/citation-file-format/citation-file-format/blob/main/CITATION.cff
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/citation-cff-context.jsonld
   - type: JSONSchema
     url: json-schema/citation-cff-schema.json
