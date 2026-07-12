@@ -149,6 +149,8 @@ apis:
       assigns a DOI and populates the deposit form from the CFF
       file's authors, title, and version.
 common:
+  - type: DomainSecurity
+    url: security/citation-cff-domain-security.yml
   - type: Website
     url: https://citation-file-format.github.io/
   - type: Documentation
