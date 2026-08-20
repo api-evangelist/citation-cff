@@ -46,6 +46,11 @@ apis:
   - aid: citation-cff:cff-schema
     name: Citation File Format Schema
     tags:
+      - JSON-Schema
+      - Schema
+      - Validation
+      - YAML
+    tags_raw:
       - JSON Schema
       - Schema
       - Validation
