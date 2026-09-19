@@ -33,6 +33,15 @@ position: Standard
 specificationVersion: '0.23'
 tags:
   - Academic
+  - Citations
+  - Metadata
+  - Open Standard
+  - Repository
+  - Research
+  - Software
+  - YAML
+tags_raw:
+  - Academic
   - Citation
   - Metadata
   - Open Standard
