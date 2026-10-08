@@ -188,6 +188,12 @@ apis:
       assigns a DOI and populates the deposit form from the CFF
       file's authors, title, and version.
 common:
+  - type: Plans
+    url: plans/citation-cff-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/citation-cff-rate-limits.yml
+  - type: FinOps
+    url: finops/citation-cff-finops.yml
   - type: DomainSecurity
     url: security/citation-cff-domain-security.yml
   - type: Website
