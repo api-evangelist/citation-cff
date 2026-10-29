@@ -1,4 +1,4 @@
-# Citation File Format (citation-cff)
+# Citation File Format
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,78 +64,126 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The Citation File Format (CFF) is a human- and machine-readable YAML schema for providing citation metadata for software and datasets in source code repositories. A CITATION.cff file at the root of a repository declares authors, version, DOI, release date, and reference metadata, enabling consistent academic attribution across publishing and discovery platforms.
+The Citation File Format (CFF) is a human- and machine-readable YAML schema for providing citation metadata for software and datasets in source code repositories. A CITATION.cff file at the root of a repository declares authors, version, DOI, release date, and reference metadata, enabling consistent academic attribution across publishing and discovery platforms. CFF is governed as an open community standard with a published JSON Schema, a guide, and a maintained schema repository on GitHub. Native integrations include GitHub citation display, Zenodo software publishing, and the Zotero browser plugin. Tooling includes cffinit for authoring, cffconvert for conversion to BibTeX/RIS/CodeMeta/EndNote formats, and the cff-validator GitHub Action for CI validation. The current schema version is 1.2.0.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/citation-cff/refs/heads/main/apis.yml)
+**Areas:** Academic · Citations · Metadata · Open Standard · Repository · Research · Software · YAML
 
-## Scope
+## Citation File Format on APIs.io
 
-- **Type:** Standard
-- **Position:** Standard
-- **Access:** Open
+Everything profiled for Citation File Format is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/citation-cff/](https://apis.io/providers/citation-cff/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (6)
 
- - Academic, Citation, Metadata, Open Standard, Repository, Research, Software, YAML
+- [Citation File Format Schema](https://apis.io/apis/citation-cff/cff-schema/) — The CFF schema defines the structure of a CITATION.cff file in YAML, including required cff-version, message, and authors fields plus optional version, doi,…
+- [cffinit Authoring Tool](https://apis.io/apis/citation-cff/cffinit/) — cffinit is a web-based form that walks software authors through creating a syntactically and semantically valid CITATION.cff file. It produces downloadable…
+- [cffconvert](https://apis.io/apis/citation-cff/cffconvert/) — cffconvert is a Python command-line tool and library that converts CITATION.cff files to APA plain text, BibTeX, CodeMeta, EndNote, RIS, schema.org JSON-LD,…
+- [cff-validator GitHub Action](https://apis.io/apis/citation-cff/cff-validator/) — The cff-validator GitHub Action runs schema validation on a repository's CITATION.cff during continuous integration so that malformed or non-compliant…
+- [GitHub Native Citation Support](https://apis.io/apis/citation-cff/github-citation-integration/) — GitHub natively reads CITATION.cff files and renders a Cite this repository button on the repository landing page that generates BibTeX and APA snippets…
+- [Zenodo Software Publishing](https://apis.io/apis/citation-cff/zenodo-integration/) — The GitHub-Zenodo integration uses CITATION.cff metadata when publishing a release as a citable software record. Zenodo assigns a DOI and populates the…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-04-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Standard
+#### JSON Schema (1)
 
-CFF is governed as an open community standard with a published JSON Schema, a guide, and a maintained schema repository on GitHub. The current schema version is **1.2.0**. CFF is maintained by community maintainers Stephan Druskat and Jurriaan H. Spaaks, with development support from the German Aerospace Center, the Netherlands eScience Center, and the Software Sustainability Institute.
+The data models the API reads and writes.
 
-## Components
+- [Citation File Format (CFF) - Subset Profile](https://apis.io/schemas/citation-cff/citation-cff/)
 
-### Citation File Format Schema
-The CFF schema defines the structure of a CITATION.cff file in YAML, including required `cff-version`, `message`, and `authors` fields plus optional `version`, `doi`, `license`, `repository-code`, `preferred-citation`, and `references` blocks.
+#### JSON-LD (1)
 
-- [Schema (JSON Schema)](https://github.com/citation-file-format/citation-file-format/blob/main/schema.json)
-- [Schema Guide](https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md)
-- [Documentation](https://github.com/citation-file-format/citation-file-format)
-- [Local schema profile](json-schema/citation-cff-schema.json)
+Linked-data contexts for the provider's vocabulary.
 
-### cffinit
-A web-based form that walks software authors through creating a syntactically and semantically valid CITATION.cff file.
+- [Citation Cff Context](https://apis.io/jsonld/citation-cff/citation-cff-context/)
 
-- [Web Application](https://citation-file-format.github.io/cff-initializer-javascript/)
+#### Governance rules (2)
 
-### cffconvert
-A Python command-line tool and library that converts CITATION.cff files to APA, BibTeX, CodeMeta, EndNote, RIS, schema.org JSON-LD, and Zenodo deposition JSON.
+Spectral rulesets for the provider's contracts.
 
-- [Source](https://github.com/citation-file-format/cffconvert)
-- [Package](https://pypi.org/project/cffconvert/)
+- [Citation File Format — jsonschema rules](https://apis.io/rules/citation-cff/citation-cff-jsonschema-spectral-rules/)
+- [Citation File Format API Rules](https://apis.io/rules/citation-cff/citation-cff-rules/)
 
-### cff-validator GitHub Action
-A GitHub Action that runs schema validation on a repository's CITATION.cff during continuous integration.
+#### Security (1)
 
-- [Source](https://github.com/dieghernan/cff-validator)
-- [Marketplace](https://github.com/marketplace/actions/cff-validator)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Integrations
+- [Citation Cff Domain Security](https://apis.io/security/citation-cff/citation-cff-domain-security/)
 
-- **GitHub** natively reads CITATION.cff files and renders a *Cite this repository* button.
-- **Zenodo** uses CFF metadata when publishing a release through the GitHub-Zenodo integration.
-- **Zotero** can import CFF references via a browser plugin.
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
+
+- [Citation Cff Plans Pricing](https://apis.io/plans/citation-cff/citation-cff-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Citation Cff Rate Limits](https://apis.io/rate-limits/citation-cff/citation-cff-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Citation Cff Finops](https://apis.io/finops/citation-cff/citation-cff-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://citation-file-format.github.io/)
 - [Documentation](https://github.com/citation-file-format/citation-file-format)
-- [Schema Guide](https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md)
-- [Schema](https://github.com/citation-file-format/citation-file-format/blob/main/schema.json)
-- [GitHub](https://github.com/citation-file-format)
-- [Governance](https://github.com/citation-file-format/governance)
-- [Issues](https://github.com/citation-file-format/citation-file-format/issues)
-- [License](https://github.com/citation-file-format/citation-file-format/blob/main/LICENSE)
-- [JSON-LD Context](json-ld/citation-cff-context.jsonld)
-- [JSON Schema](json-schema/citation-cff-schema.json)
-- [Spectral Ruleset](rules/citation-cff-rules.yml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 17.2** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 22.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/citation-cff/](https://apis.io/providers/citation-cff/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Citation File Format: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/citation-cff/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
